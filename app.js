@@ -46,7 +46,7 @@ function StartupController($scope) {
   }
 
   //TheAngularMagic======================
-  $scope.calculate = { mean: 0, median: 0, mode: 0, resultmean: 0, resultmedian: 0, resultmode: 0};
+  $scope.calculate = { resultmean: 0, resultmedian: 0, resultmode: 0 };
 
   var computeMean = function() {
     $scope.calculate.resultmean = $scope.calculate.mean = findMean(numArray);
