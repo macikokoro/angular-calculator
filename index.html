@@ -11,19 +11,10 @@
 
       <form ng-controller="StartupController">
 
-        tempMean:<input ng-change="computeMean()" ng-model="calculate.mean">
+        <b>User input:</b><input type="text" ng-change="computeMean()" ng-model="calculate.mean">
           <br/>
-        tempMedian: <input ng-change="computeMedian()" ng-model="calculate.median">
-          <br/>
-        tempMode: <input ng-change="computeMode()" ng-model="calculate.mode"><br/>
         <b>Mean:</b>
           {{ calculate.resultmean }}
-          <br/>
-        <b>Median:</b>
-          {{ calculate.resultmedian }}
-          <br/>
-        <b>Mode:</b>
-          {{ calculate.resultmode }}
           <br/>
       </form>
 
