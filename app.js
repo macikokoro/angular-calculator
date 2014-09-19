@@ -46,18 +46,18 @@ function StartupController($scope) {
   }
 
   //TheAngularMagic======================
-  $scope.calculate = { mean: 0, median: 0, dailyaftertax: 0, monthlyaftertax: 0 };
+  $scope.calculate = { mean: 0, median: 0, mode: 0, resultmean: 0, resultmedian: 0, resultmode: 0};
 
   var computeMean = function() {
-    $scope.calculate.dailyaftertax = $scope.calculate.mean = findMean(numArray);
+    $scope.calculate.resultmean = $scope.calculate.mean = findMean(numArray);
   };
 
   var computeMedian = function() {
-    $scope.calculate.monthlyaftertax = $scope.calculate.median = findMedian(numArray);
+    $scope.calculate.resultmedian = $scope.calculate.median = findMedian(numArray);
   };
 
   var computeMode = function() {
-    $scope.calculate.yearlyaftertax = $scope.calculate.mode = findMode(numArray);
+    $scope.calculate.resultmode = $scope.calculate.mode = findMode(numArray);
   };
 
 
