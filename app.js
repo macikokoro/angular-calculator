@@ -46,7 +46,7 @@ function StartupController($scope) {
   }
 
   //TheAngularMagic======================
-  $scope.calculate = { resultmean: 0, resultmedian: 0, resultmode: 0 };
+  $scope.calculate = { resultmean: 0, resultmedian: 0, resultmode: 0, dailycount: 0, allresults: 0 };
 
   var computeMean = function() {
     $scope.calculate.resultmean = $scope.calculate.mean = findMean(numArray);
@@ -57,15 +57,15 @@ function StartupController($scope) {
   };
 
   var computeMode = function() {
-    $scope.calculate.resultmode = $scope.calculate.mode = findMode(numArray);
+    $scope.calculate.resultmode = $scope.calculate.mode = findMode(numArray).join();
   };
-
 
   $scope.$watch('calculate.mean', computeMean);
   $scope.$watch('calculate.median', computeMedian);
   $scope.$watch('calculate.mode', computeMode);
 
 }
+
 function TextController($scope){
   $scope.someText = "Meeny Miny Mode Calculator";
 }
