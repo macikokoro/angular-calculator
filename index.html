@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+  </head>
+  <body ng-app>
+    <div ng-controller="TextController">
+      <h2>{{ someText }}</h2>
+
+      <form ng-controller="StartupController">
+
+        tempMean:<input ng-change="computeMean()" ng-model="calculate.mean">
+      <br/>
+        tempMedian: <input ng-change="computeMedian()" ng-model="calculate.median">
+        <br/>
+        tempMode: <input ng-change="computeMode()" ng-model="calculate.mode"><br/>
+        <b>Mean:</b>
+          {{ calculate.dailyaftertax }} <br/>
+        <b>Median: </b>
+          {{ calculate.monthlyaftertax }}<br/>
+        <b>Mode:</b>
+          {{ calculate.yearlyaftertax }}<br/>
+      </form>
+
+    </div>
+  </body>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</html>
