@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div data-ng-app="calculator">
+      <div data-ng-controller="calcController">
+
+      <!-- input form  -->
+      <form>
+        <p>inputs:</p>
+        <input type="text" data-ng-model="input">
+        <button data-ng-click="calculate(input)">Submit</button>
+      </form>
+      <!-- results -->
+      <calc-output></cal-output>
+      </div>
+    </div>
+    <script src="bundle.js">
+    </script>
+  </body>
+</html>
